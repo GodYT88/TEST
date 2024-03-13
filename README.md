@@ -475,12 +475,6 @@ elseif _G.Method == "Under" then
 TP(v.HumanoidRootPart.CFrame * CFrame.new(0,-_G.Distance,0) * CFrame.Angles(math.rad(90),0,0))
 elseif _G.Method == "Over" then
 TP(v.HumanoidRootPart.CFrame * CFrame.new(0,_G.Distance,0) * CFrame.Angles(math.rad(-90),0,0))
-elseif _G.Method == "XYLO-Custom" then
-spawn(function()
-TP(v.HumanoidRootPart.CFrame * CFrame.new(5,4,_G.Distance) * CFrame.Angles(math.rad(-45),0,0))
-task.wait(0.1)
-TP(v.HumanoidRootPart.CFrame * CFrame.new(5,4,_G.Distance) * CFrame.Angles(math.rad(-45),0,0))
-end)
 end
 click()
 TPCHEST()
@@ -796,7 +790,7 @@ FarmSettings:AddDropdown(
             "Method",
             {
                 Title = "Select Method",
-                Values = {"Behind", "Front", "Over", "Under", "XYLO-Custom"},
+                Values = {"Behind", "Front", "Over", "Under"},
                 Multi = false,
                 Default = "เลือก-Select",
                 Callback = function(Value)
