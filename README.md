@@ -1,6 +1,7 @@
 
 _G.AntiAFKEnabled = true
 local vu = game:GetService("VirtualUser")
+local toolName;
 game.Players.LocalPlayer.Idled:connect(
     function()
         if _G.AntiAFKEnabled then
