@@ -443,9 +443,14 @@ end)
     
 
 function click()
-game:GetService'VirtualUser':CaptureController()
+pcall(function()
+	if game:GetService("Players").LocalPlayer.Character.Humanoid.Health >= 1 then
+	game:GetService'VirtualUser':CaptureController()
 	game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+ 	game:GetService'VirtualUser':Button1Up(Vector2.new(1280, 672))
         end
+end)
+end
 
         spawn(
             function()
