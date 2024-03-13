@@ -409,7 +409,7 @@ end)
         local replaces_str = {Players.LocalPlayer.Name}
 
         function TPCHEST()
-            pcall(
+            --[[pcall(
                 function()
                     for i, v in pairs(game:GetService("Workspace").Chests:GetDescendants()) do
                         if v.ClassName == "ProximityPrompt" then
@@ -418,7 +418,7 @@ end)
                         end
                     end
                 end
-            )
+            )]]
         end
 
 
@@ -817,7 +817,8 @@ local MobDP = FarmSettings:AddDropdown("Weapon", {
                 Multi = false,
                 Default = false,
                 Callback = function(a)
-                _G.Weapon = a  
+                _G.Weapon = a
+		toolName = a
                   end 
             })
 spawn(function()
